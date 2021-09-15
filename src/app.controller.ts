@@ -6,7 +6,7 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  findMe(variants = [3,5,-4,8,11,1,-1,6], sum = 10): number[] {
+    return this.appService.findMe(variants, sum);
   }
 }
